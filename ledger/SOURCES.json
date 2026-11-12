@@ -1,0 +1,36 @@
+{
+ "note": "Sources are never committed. Identified by content; names are not recorded here because the repo is public.",
+ "sources": [
+  {
+   "id": "S1",
+   "kind": "prose skill, markdown, 30 laws / schemas A-N / 14 templates",
+   "bytes": 172230,
+   "sha256": "c37b3862c470bb0c10a5e86a9ed6f5ea5c35965c48863c13760fb83a79c61b40"
+  },
+  {
+   "id": "S2",
+   "kind": "prose system, XML, 25 parts",
+   "bytes": 533896,
+   "sha256": "76af156e919fa3b271af7fc4e838f9c8d3aebc5f77126658aa9fcbbc1ad59b90"
+  },
+  {
+   "id": "S3",
+   "kind": "zip archive (.skill): decision-rule XML Brain + references + data tables + scripts",
+   "bytes": 691912,
+   "sha256": "f577536ef0afdeae689ec061534270f4434ff743ceb389c4a81fa63d09ef3b5d",
+   "unpacked_files": 77,
+   "unpacked_bytes": 3638382,
+   "py_scripts": 8,
+   "stack_csvs": 22,
+   "csv_total": 35,
+   "json_total": 4,
+   "md_total": 28,
+   "xml_total": 1
+  }
+ ],
+ "work_order": {
+  "version_in_file": "2.9",
+  "bytes": 67335,
+  "sha256": "7e66b6790a875c61ace19ad26484b7098b76d51cd4969edbc0cb6e3fda2ea405"
+ }
+}
