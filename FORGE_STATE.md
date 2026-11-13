@@ -19,7 +19,7 @@
 ## Subagent counters (used / cap)
 | Kind | Used | Cap |
 |---|---|---|
-| source extraction | 8 launched (s1a s1b s3a s2a s2b s2c s2d done; s3b running) | 8 |
+| source extraction | 8 (all shards done) | 8 |
 | field study | 0 | 4 |
 | fixture and key authoring | 0 | 2 |
 | dev contestants | 0 | 8 |
