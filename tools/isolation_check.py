@@ -2,8 +2,8 @@
 """isolation_check.py - prove that shipped files carry no source canon and no pasted text.
 
 Checks (each reported separately in JSON):
-  tokens    case-sensitive search of the shipped trees for every product token in
-            docs/ISOLATION-TOKENS.txt plus a fixed list; one hit fails.
+  tokens    case-sensitive search of the shipped trees for every product token; the committed list
+            docs/ISOLATION-TOKENS.txt holds only hashes (public repo), matched against hashed word windows.
   copies    no tracked file (git ls-files) has the sha256 of a raw source file.
   verbatim  no run of N or more consecutive words (default 21, i.e. "above 20 words") in a shipped
             file also occurs in a reference corpus (the raw sources, and any extra --against dir such
@@ -15,7 +15,6 @@ Standard library only, no network. Exit 0 = pass, 1 = fail, 2 = usage error.
 import argparse, hashlib, json, os, re, subprocess, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FIXED = ["CROWN", "GlassIsland", "Glass-Era", "avatar-bottom-nav", "city-shard", "hyper-local", "LAW-ENGLISH"]
 TEXT_EXT = {".md", ".txt", ".py", ".json", ".xml", ".html", ".css", ".js", ".mjs", ".ts", ".tsx", ".sh", ".yml", ".yaml", ".csv"}
 WORD = re.compile(r"[A-Za-z0-9ऀ-ॿ']+")
 
@@ -44,33 +43,41 @@ def read(p):
         return f.read()
 
 
-def load_tokens(path):
-    toks = list(FIXED)
+SPLIT = re.compile(r"[^0-9A-Za-z\u0900-\u097F]+")
+
+
+def norm_words(s):
+    return [w for w in SPLIT.split(s) if w]
+
+
+def load_tokens(path, plain=None):
+    """Hashed token list: lines 'word_count<TAB>sha256' (comments start with #). Optional extra plain list."""
+    hashes = {}
     if os.path.isfile(path):
         for line in read(path).split("\n"):
-            line = line.strip()
-            if line and not line.startswith("#"):
-                toks.append(line)
-    seen, out = set(), []
-    for t in toks:
-        if t not in seen:
-            seen.add(t)
-            out.append(t)
-    return out
+            if line.strip() and not line.startswith("#"):
+                n, h = line.split("\t")
+                hashes.setdefault(int(n), set()).add(h.strip())
+    if plain and os.path.isfile(plain):
+        for t in read(plain).split("\n"):
+            w = norm_words(t)
+            if w:
+                hashes.setdefault(len(w), set()).add(hashlib.sha256(" ".join(w).encode()).hexdigest())
+    return hashes
 
 
-def check_tokens(files, tokens):
+def check_tokens(files, hashes):
     hits = []
     for p in files:
-        text = read(p)
-        for t in tokens:
-            # whole-token match where the token starts/ends with a word character
-            pat = (r"(?<![A-Za-z0-9_])" if t[0].isalnum() else "") + re.escape(t) + (r"(?![A-Za-z0-9_])" if t[-1].isalnum() else "")
-            for m in re.finditer(pat, text):
-                line = text.count("\n", 0, m.start()) + 1
-                hits.append({"file": os.path.relpath(p, REPO), "line": line, "token": t})
-    return {"check": "tokens", "tokens": len(tokens), "files": len(files), "hits": hits[:200],
-            "hit_count": len(hits), "pass": not hits}
+        lines = read(p).split("\n")
+        for ln, line in enumerate(lines, 1):
+            w = norm_words(line)
+            for n, hs in hashes.items():
+                for i in range(0, len(w) - n + 1):
+                    if hashlib.sha256(" ".join(w[i:i + n]).encode()).hexdigest() in hs:
+                        hits.append({"file": os.path.relpath(p, REPO), "line": ln, "words": n})
+    return {"check": "tokens", "token_hashes": sum(len(v) for v in hashes.values()), "files": len(files),
+            "hits": hits[:200], "hit_count": len(hits), "pass": not hits}
 
 
 def check_copies(src_files):
@@ -135,7 +142,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--roots", nargs="*", default=["src/boss-skill", "editions", ".claude"], help="shipped trees")
     ap.add_argument("--exclude", nargs="*", default=["src/boss-skill/examples"], help="repo-relative dirs to skip")
-    ap.add_argument("--tokens", default=os.path.join(REPO, "docs", "ISOLATION-TOKENS.txt"))
+    ap.add_argument("--tokens", default=os.path.join(REPO, "docs", "ISOLATION-TOKENS.txt"), help="hashed token list")
+    ap.add_argument("--plain-tokens", default="/tmp/forge-sealed/ISOLATION-TOKENS.plain.txt", help="optional plain list (never committed)")
     ap.add_argument("--src", default="/tmp/forge-src", help="raw sources: prose/*.md|xml and skill/ (optional)")
     ap.add_argument("--against", nargs="*", default=[], help="extra corpus dirs for the verbatim check (e.g. fetched field files)")
     ap.add_argument("--words", type=int, default=21, help="verbatim run length that fails (default 21 = above 20 words)")
@@ -147,7 +155,7 @@ def main():
     raw = [p for p in raw if os.path.isfile(p)]
     corpus = raw + corpus_files([os.path.join(a.src, "skill")] if os.path.isdir(os.path.join(a.src, "skill")) else []) + corpus_files(a.against)
     corpus = [c for c in corpus if not c.endswith(".csv") and os.path.getsize(c) < 2_000_000]
-    results = [check_tokens(files, load_tokens(a.tokens)),
+    results = [check_tokens(files, load_tokens(a.tokens, a.plain_tokens)),
                check_copies([p for p in raw]) if raw else {"check": "copies", "pass": True, "label": "NOT-RUN: raw sources absent"},
                check_verbatim(files, corpus, a.words)]
     ok = all(r["pass"] for r in results)

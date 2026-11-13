@@ -73,7 +73,7 @@ def units_s1(path):
 def units_s2(path):
     """XML source: one unit per 2-space-indented child tag of each part; long units split at 4-space children."""
     L = read_lines(path)
-    part_starts = [i for i, l in enumerate(L) if l.startswith("<omni_builder_master_prompt")]
+    part_starts = [i for i, l in enumerate(L) if re.match(r'^<[A-Za-z_]+ [^>]*\bpart="', l)]
     bounds = [0] + part_starts + [len(L)]
     cdata = [False] * len(L)
     inside = False
