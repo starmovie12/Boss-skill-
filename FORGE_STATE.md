@@ -20,7 +20,7 @@
 | Kind | Used | Cap |
 |---|---|---|
 | source extraction | 8 (all shards done) | 8 |
-| field study | 0 | 4 |
+| field study | 3 launched (F1 process, F2 design-web, F3 spec-prompt; F4 audit-app pending) | 4 |
 | fixture and key authoring | 0 | 2 |
 | dev contestants | 0 | 8 |
 | sealed contestants | 0 | 24 (12 in MVB) |
@@ -28,9 +28,9 @@
 | graders | 0 | 10 |
 | proxy tests | 0 | 6 |
 | fresh-context review | 0 | 2 |
-| total | 8 | 68 |
+| total | 11 | 68 |
 
-Field-study fetches: 0 / 60.
+Field-study fetches: 18 / 60 counted at PH0 (field/FETCHLOG-PH0.txt); run budgets F1 10, F2 12, F3 12, F4 8.
 
 ## Open decisions
 - none
