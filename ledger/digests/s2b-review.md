@@ -27,7 +27,7 @@
 - The rules are rigid: every spec carries all 23 sections (S2-P08-2300), "survive 50x load" applies universally (S2-P08-2348, S2-P09-2593), and the weight calibration is deferred to a later part (S2-P08-2507, S2-P09-2643).
 - Unit S2-P10-2728 says to "leave hooks now" for 10-step futures. That invites over-building and works against scope discipline.
 - Repetition and ceremony: S2-P06-2015 repeats 1829, 1923 and 1949; S2-P10-2797 repeats 2673; S2-P07-2239 is self-praise; S2-P10-2661 and 2819 are motivational.
-- Product leakage into the universal parts: the coronation sequence and the reference screen in S2-P06-1839, a batch size of 400 in S2-P06-1923, and the house direction in S2-P05-1698.
+- Product leakage into the universal parts: a product-specific ceremony sequence and the reference screen in S2-P06-1839, a batch size of 400 in S2-P06-1923, and the house direction in S2-P05-1698.
 
 ## GAPS
 - Phone-only operations covers building and shipping but not on-device testing: no steps for installing a development build, scanning a preview, reading logs or debugging from the phone (S2-P06-1949). The WEB mode also has no phone-only preview or deploy flow.
