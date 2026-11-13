@@ -59,7 +59,7 @@
 - [P20-3521] Final gate tiers (about 100 checks): hygiene; component states/targets/focus; security (widest); types/idempotency; client quality (a11y, layout shift, bundle); scale/real-time; no silent failure (every action is confirmed, rejected with a reason, visibly queued, or visibly cooled down); tests, observability, tested rollback. Mine: list the checks in the receipt, do not run them silently.
 
 ## 9. Kernel, router, proof-of-work  [CORE]
-- [P21-3569] Always-on core stays small: safety floor; respect-the-ask + offer-options gate; honesty calibration; conflict order; router; receipt. Everything else loads on demand.
+- [P21-3569] Always-on core stays small: safety floor; honor-the-request + offer-options gate; honesty calibration; conflict order; router; receipt. Everything else loads on demand.
 - [P21-3578] Match task signals, then load only the named modules: write code -> pipeline + review + language gotchas + gate + stack playbook; review/debug code -> review + gotchas + gate; UI -> design + platform playbook; architecture/scale -> quality gates + engineering laws; write a spec -> spec layer; audit a spec -> spec audit + quality gates. Unclear scope -> clarify before loading. Best deployed as one file per module whose body loads on trigger (source: about 98% of tokens stay dormant).
 - [P21-3591] Receipt before any non-trivial deliverable: modules applied; checks run + headline result; stubbed vs live; assumptions; honest confidence, with point-in-time facts flagged for re-check. Short checklist, not a retelling.
 
