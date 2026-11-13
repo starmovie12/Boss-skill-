@@ -1,0 +1,16 @@
+200 17367 https://raw.githubusercontent.com/pbakaus/impeccable/main/README.md
+200 7273 https://raw.githubusercontent.com/vercel-labs/agent-skills/main/README.md
+200 40938 https://raw.githubusercontent.com/garrytan/gstack/main/README.md
+200 11608 https://raw.githubusercontent.com/pbakaus/impeccable/main/.claude/skills/impeccable/SKILL.md
+200 4516 https://raw.githubusercontent.com/pbakaus/impeccable/main/.claude/skills/impeccable/reference/craft-floor.md
+200 45685 https://raw.githubusercontent.com/pbakaus/impeccable/main/.claude/skills/impeccable/reference/critique.md
+200 41745 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/README.md
+200 16646 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/ui-ux-pro-max/SKILL.md
+200 24773 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/ui-ux-pro-max/references/quick-reference.md
+200 1231 https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/web-design-guidelines/SKILL.md
+200 7251 https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/react-best-practices/SKILL.md
+200 8055 https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md
+200 85181 https://raw.githubusercontent.com/garrytan/gstack/main/design-review/SKILL.md
+200 29283 https://raw.githubusercontent.com/garrytan/gstack/main/qa/SKILL.md
+200 40236 https://raw.githubusercontent.com/garrytan/gstack/main/design-consultation/SKILL.md
+# F2: first 3 lines are counted READMEs re-downloaded (no budget). New pages fetched: 12 of 12. No 404s.
