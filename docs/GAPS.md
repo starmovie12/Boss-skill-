@@ -20,11 +20,11 @@
 - No verifiable citation (quoted snippet checked at file:line), no confidence label, no "not checked" section, no coverage matrix, no fix re-verification (all reviews).
 - Lenses are tuned to social, economy and realtime products; nothing for plain correctness or measured performance (S2-P04-1239 to S2-P04-1371).
 ## Design variety
-- S1 mandates one house look and one navigation skin (S1-2071, S1-2410); S1/S2 offer a fixed menu of named directions (S1-2901, S2-P05-1698); S3 picks palettes, fonts and styles from tables by product type (see s3b), so equal briefs give equal looks.
+- S1 mandates one house look and one navigation skin (S1-2071, S1-2410); S1/S2 offer a fixed menu of named directions (S1-2901, S2-P05-1698); S3 picks palettes, fonts and styles from tables keyed by product type (one minimal style primary in 75 of 192 rows, about half the primaries blue, one shared destructive red, fixed dark surfaces), so equal briefs give equal looks (S3-F:data/products.csv, S3-F:data/colors.csv, S3-F:scripts/design_system.py).
 - No domain study of real products, no randomized divergence, no cross-project distinctiveness check; the anti-generic audit judges one design against templates, never against earlier projects (S3-B-0148).
 ## Verification
 - Every gate is silent or self-graded, scorecards are graded by the maker, "passed" is claimed from mental simulation (S1-2340, S2-P04-1510, S3-F:references/scorecard-and-evidence.md).
-- No geometry checker for placement (overlap, off-screen, covered primary action, tap size); S3 ships contrast and glyph scripts only.
+- No geometry checker for placement (overlap, off-screen, covered primary action, tap size); S3 ships contrast and glyph scripts only, and its contrast script always exits 0 (S3-F:scripts/contrast_check.py).
 ## Placement
 - No single occlusion rule ("nothing covers the primary action or a required control"); coverage rules are scattered over keyboard, safe areas, sticky insets and focus (S3 review).
 - No conventional-position rule for close, search, back and account controls outside one product's canon (S2-P03-0989 has back top-left; S1-2410 is product-specific).

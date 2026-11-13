@@ -1,13 +1,14 @@
 # FORGE_STATE
 
-- phase: PH1 ledger (extraction running)
+- phase: PH1b field study (PH1 ledger PASS: 521/521 units, all fated)
 - working branch: `claude/hopeful-fermat-35aqea` (mirror: `boss-skill-forge`)
 - last commit: see `git log -1` on the working branch
 - freeze hash: not set
 - pull request: https://github.com/starmovie12/Boss-skill-/pull/1 (opened by the operator from the Claude Code UI; every push to the working branch updates it)
-- next step: finish shards s2a s2b s2c (a shard is done when `ledger/units/<shard>.jsonl` and `ledger/digests/<shard>-digest.md` are committed), then launch s2d and s3b, then `python3 tools/ledger_check.py --skip-field` (`/tmp/forge-src/units/<shard>.tsv` -> `ledger/units/<shard>.jsonl`), then run `python3 tools/ledger_check.py --skip-field`.
+- next step: run field-study runs F1-F4 (prompts in session; brief at /tmp/forge-field/FIELD-BRIEF.md, rebuild from docs/GAPS.md if lost), then docs/FIELD-SYNTHESIS.md, then PH2 authoring runs A and B (specs in evals/authoring/).
 
 ## Done
+- PH1 ledger: 521 units fated (`python3 tools/ledger_check.py --skip-field` PASS), digests in ledger/digests/, docs GAPS, FLAWS, STRENGTHS, CONTRADICTIONS, hashed ISOLATION-TOKENS.
 - PH0 preflight: sources located and hashed (ledger/SOURCES.json), environment probed (docs/ENV.md), fresh facts (docs/FRESH-FACTS.md), unit rules + manifest (521 units), push probe.
 
 ## Resume notes

@@ -29,12 +29,12 @@
 - ST-S3-2 Four evidence labels, three never-averaged layers (spec, render, interact), "spec-approved, render-unverified" verdict, three-list receipt (S3-B-0089) [CORE, AUDIT]
 - ST-S3-3 Acceptance test written before design, never bent afterwards (S3-B-0189) [CORE]
 - ST-S3-4 Text-only placement plan before styling: five questions per element, frequency grading, one main action, color-stripped check (S3-B-0185, S3-B-0204, S3-B-0213) [WEB, APP]
-- ST-S3-5 No-shortcut zone for money, identity, consent, destructive and security flows, with idempotent money actions (S3-B-0098, S3-B-0204) [CORE]
+- ST-S3-5 No-shortcut zone for money, identity, consent, destructive and security flows (idempotent money actions), under a safety floor, inputs-as-data rule and six-level priority order (S3-B-0098, S3-B-0204, S3-B-0036, S3-B-0046, S3-B-0166) [CORE]
 - ST-S3-6 Seven platform edge cases, ten responsive checks, nine plus five states, transition-map rows (S3-F:references/layout-platform.md) [WEB, APP]
 - ST-S3-7 Gate stack: stress matrix, recovery cases, regression list, consistency matrix, P0-P3 fix loop capped at 3, 31-question veto list (S3-F:references/tests-gates.md, S3-B-0230, S3-B-0253) [CORE]
 - ST-S3-8 Three genuinely different paths for large new screens and the anti-generic rule that two layers beyond color must change (S3-B-0132, S3-B-0148) [WEB, APP]
-- ST-S3-9 Verify-first handling of non-Latin fonts with five rendering checks (S3-B-0213) [WEB, APP]
-- ST-S3-10 Safety floor, inputs-as-data and a six-level priority order with exception notes (S3-B-0036, S3-B-0046, S3-B-0166) [CORE]
+- ST-S3-9 Verify-first handling of non-Latin fonts with five rendering checks; visual heuristics scoped by screen archetype with an autopilot-sign list and exception notes (S3-B-0213, S3-F:references/visual-craft.md) [WEB, APP]
+- ST-S3-10 Three-tier token method (primitive, semantic, component) with dark mode as a semantic-only delta, paired on-color roles and a measured palette table; full state model with precedence (S3-F:references/design-system/token-architecture.md, S3-F:references/design-system/states-and-variants.md) [WEB, APP]
 
 ## PLACEMENT (every mechanism the sources use to put elements in the right place and keep them there)
 - PL-S-1 Layout decided in text before any styling; color-stripped readability check (S3-B-0166, S3-B-0204, S3-B-0213)
