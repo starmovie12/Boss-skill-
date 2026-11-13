@@ -3756,7 +3756,7 @@
 "sha": "739e61b8b7b3"
 },
 {
-"id": "S3-F:ui-design-master/LICENSE-ui-ux-pro-max-MIT.txt",
+"id": "S3-F:LICENSE-ui-ux-pro-max-MIT.txt",
 "src": "S3",
 "lines": [
 1,
@@ -3765,7 +3765,7 @@
 "sha": "738f69dfa83d"
 },
 {
-"id": "S3-F:ui-design-master/SKILL.md",
+"id": "S3-F:SKILL.md",
 "src": "S3",
 "lines": [
 1,
@@ -3774,7 +3774,7 @@
 "sha": "a0f395e9cc8b"
 },
 {
-"id": "S3-F:ui-design-master/data/app-interface.csv",
+"id": "S3-F:data/app-interface.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3783,7 +3783,7 @@
 "sha": "331e7cf2c0b2"
 },
 {
-"id": "S3-F:ui-design-master/data/catalog-summary.json",
+"id": "S3-F:data/catalog-summary.json",
 "src": "S3",
 "lines": [
 1,
@@ -3792,7 +3792,7 @@
 "sha": "6638da97231c"
 },
 {
-"id": "S3-F:ui-design-master/data/charts.csv",
+"id": "S3-F:data/charts.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3801,7 +3801,7 @@
 "sha": "4115cf112068"
 },
 {
-"id": "S3-F:ui-design-master/data/colors.csv",
+"id": "S3-F:data/colors.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3810,7 +3810,7 @@
 "sha": "8162429222bc"
 },
 {
-"id": "S3-F:ui-design-master/data/data-provenance.json",
+"id": "S3-F:data/data-provenance.json",
 "src": "S3",
 "lines": [
 1,
@@ -3819,7 +3819,7 @@
 "sha": "e82fb33ed493"
 },
 {
-"id": "S3-F:ui-design-master/data/google-font-licenses.json",
+"id": "S3-F:data/google-font-licenses.json",
 "src": "S3",
 "lines": [
 1,
@@ -3828,7 +3828,7 @@
 "sha": "35688523f295"
 },
 {
-"id": "S3-F:ui-design-master/data/google-fonts.csv",
+"id": "S3-F:data/google-fonts.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3837,7 +3837,7 @@
 "sha": "1c8c3b2ea1fa"
 },
 {
-"id": "S3-F:ui-design-master/data/icons.csv",
+"id": "S3-F:data/icons.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3846,7 +3846,7 @@
 "sha": "50816c601203"
 },
 {
-"id": "S3-F:ui-design-master/data/landing.csv",
+"id": "S3-F:data/landing.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3855,7 +3855,7 @@
 "sha": "9a2edd3bb676"
 },
 {
-"id": "S3-F:ui-design-master/data/motion.csv",
+"id": "S3-F:data/motion.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3864,7 +3864,7 @@
 "sha": "381affe8df8e"
 },
 {
-"id": "S3-F:ui-design-master/data/phosphor-icons-upstream.json",
+"id": "S3-F:data/phosphor-icons-upstream.json",
 "src": "S3",
 "lines": [
 1,
@@ -3873,7 +3873,7 @@
 "sha": "2399325233b2"
 },
 {
-"id": "S3-F:ui-design-master/data/products.csv",
+"id": "S3-F:data/products.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3882,7 +3882,7 @@
 "sha": "42473f75e8dd"
 },
 {
-"id": "S3-F:ui-design-master/data/react-performance.csv",
+"id": "S3-F:data/react-performance.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3891,7 +3891,7 @@
 "sha": "3d925802539a"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/angular.csv",
+"id": "S3-F:data/stacks/angular.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3900,7 +3900,7 @@
 "sha": "704be83f2bad"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/astro.csv",
+"id": "S3-F:data/stacks/astro.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3909,7 +3909,7 @@
 "sha": "2c2f55fadaaf"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/avalonia.csv",
+"id": "S3-F:data/stacks/avalonia.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3918,7 +3918,7 @@
 "sha": "442fca14675a"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/flutter.csv",
+"id": "S3-F:data/stacks/flutter.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3927,7 +3927,7 @@
 "sha": "64dba0ac1734"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/html-tailwind.csv",
+"id": "S3-F:data/stacks/html-tailwind.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3936,7 +3936,7 @@
 "sha": "d05a581d20af"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/javafx.csv",
+"id": "S3-F:data/stacks/javafx.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3945,7 +3945,7 @@
 "sha": "2e819b8d5abd"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/jetpack-compose.csv",
+"id": "S3-F:data/stacks/jetpack-compose.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3954,7 +3954,7 @@
 "sha": "699de218b286"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/laravel.csv",
+"id": "S3-F:data/stacks/laravel.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3963,7 +3963,7 @@
 "sha": "854ea4daa5fc"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/nextjs.csv",
+"id": "S3-F:data/stacks/nextjs.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3972,7 +3972,7 @@
 "sha": "ecd2c27b2ea0"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/nuxt-ui.csv",
+"id": "S3-F:data/stacks/nuxt-ui.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3981,7 +3981,7 @@
 "sha": "fce682a338cf"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/nuxtjs.csv",
+"id": "S3-F:data/stacks/nuxtjs.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3990,7 +3990,7 @@
 "sha": "3d9b54ed2d15"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/react-native.csv",
+"id": "S3-F:data/stacks/react-native.csv",
 "src": "S3",
 "lines": [
 1,
@@ -3999,7 +3999,7 @@
 "sha": "ba31dd9c0c04"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/react.csv",
+"id": "S3-F:data/stacks/react.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4008,7 +4008,7 @@
 "sha": "4dd176a9787e"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/shadcn.csv",
+"id": "S3-F:data/stacks/shadcn.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4017,7 +4017,7 @@
 "sha": "e56cfde5b749"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/svelte.csv",
+"id": "S3-F:data/stacks/svelte.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4026,7 +4026,7 @@
 "sha": "f6e379ba8029"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/swiftui.csv",
+"id": "S3-F:data/stacks/swiftui.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4035,7 +4035,7 @@
 "sha": "bdd9231ff3ad"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/threejs.csv",
+"id": "S3-F:data/stacks/threejs.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4044,7 +4044,7 @@
 "sha": "155d583b9c64"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/uno.csv",
+"id": "S3-F:data/stacks/uno.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4053,7 +4053,7 @@
 "sha": "a0474363e422"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/uwp.csv",
+"id": "S3-F:data/stacks/uwp.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4062,7 +4062,7 @@
 "sha": "c409f08c1fbb"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/vue.csv",
+"id": "S3-F:data/stacks/vue.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4071,7 +4071,7 @@
 "sha": "b655f1ebb9df"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/winui.csv",
+"id": "S3-F:data/stacks/winui.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4080,7 +4080,7 @@
 "sha": "e676dc1c13ee"
 },
 {
-"id": "S3-F:ui-design-master/data/stacks/wpf.csv",
+"id": "S3-F:data/stacks/wpf.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4089,7 +4089,7 @@
 "sha": "9781a9950b20"
 },
 {
-"id": "S3-F:ui-design-master/data/styles.csv",
+"id": "S3-F:data/styles.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4098,7 +4098,7 @@
 "sha": "a93a4d9d7025"
 },
 {
-"id": "S3-F:ui-design-master/data/typography.csv",
+"id": "S3-F:data/typography.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4107,7 +4107,7 @@
 "sha": "321fc446e890"
 },
 {
-"id": "S3-F:ui-design-master/data/ui-reasoning.csv",
+"id": "S3-F:data/ui-reasoning.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4116,7 +4116,7 @@
 "sha": "f0774dd741ce"
 },
 {
-"id": "S3-F:ui-design-master/data/ux-guidelines.csv",
+"id": "S3-F:data/ux-guidelines.csv",
 "src": "S3",
 "lines": [
 1,
@@ -4125,7 +4125,7 @@
 "sha": "ff81ec613f70"
 },
 {
-"id": "S3-F:ui-design-master/references/CHANGELOG.md",
+"id": "S3-F:references/CHANGELOG.md",
 "src": "S3",
 "lines": [
 1,
@@ -4134,7 +4134,7 @@
 "sha": "c2c85dc6a67b"
 },
 {
-"id": "S3-F:ui-design-master/references/TOOLKIT-INDEX.md",
+"id": "S3-F:references/TOOLKIT-INDEX.md",
 "src": "S3",
 "lines": [
 1,
@@ -4143,7 +4143,7 @@
 "sha": "246e1d9222b2"
 },
 {
-"id": "S3-F:ui-design-master/references/copy-polish.md",
+"id": "S3-F:references/copy-polish.md",
 "src": "S3",
 "lines": [
 1,
@@ -4152,7 +4152,7 @@
 "sha": "e6f7a97b7918"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/component-specs.md",
+"id": "S3-F:references/design-system/component-specs.md",
 "src": "S3",
 "lines": [
 1,
@@ -4161,7 +4161,7 @@
 "sha": "b265d979a741"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/component-tokens.md",
+"id": "S3-F:references/design-system/component-tokens.md",
 "src": "S3",
 "lines": [
 1,
@@ -4170,7 +4170,7 @@
 "sha": "e27f8f5999ba"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/primitive-tokens.md",
+"id": "S3-F:references/design-system/primitive-tokens.md",
 "src": "S3",
 "lines": [
 1,
@@ -4179,7 +4179,7 @@
 "sha": "91e6caa12646"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/semantic-tokens.md",
+"id": "S3-F:references/design-system/semantic-tokens.md",
 "src": "S3",
 "lines": [
 1,
@@ -4188,7 +4188,7 @@
 "sha": "97e16d8061bb"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/states-and-variants.md",
+"id": "S3-F:references/design-system/states-and-variants.md",
 "src": "S3",
 "lines": [
 1,
@@ -4197,7 +4197,7 @@
 "sha": "8dacb95d57d4"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/tailwind-integration.md",
+"id": "S3-F:references/design-system/tailwind-integration.md",
 "src": "S3",
 "lines": [
 1,
@@ -4206,7 +4206,7 @@
 "sha": "6d01092db147"
 },
 {
-"id": "S3-F:ui-design-master/references/design-system/token-architecture.md",
+"id": "S3-F:references/design-system/token-architecture.md",
 "src": "S3",
 "lines": [
 1,
@@ -4215,7 +4215,7 @@
 "sha": "925f4049c4c4"
 },
 {
-"id": "S3-F:ui-design-master/references/direction-recipes.md",
+"id": "S3-F:references/direction-recipes.md",
 "src": "S3",
 "lines": [
 1,
@@ -4224,7 +4224,7 @@
 "sha": "18611314d03a"
 },
 {
-"id": "S3-F:ui-design-master/references/engine-guide.md",
+"id": "S3-F:references/engine-guide.md",
 "src": "S3",
 "lines": [
 1,
@@ -4233,7 +4233,7 @@
 "sha": "b60429ad1e0c"
 },
 {
-"id": "S3-F:ui-design-master/references/examples.md",
+"id": "S3-F:references/examples.md",
 "src": "S3",
 "lines": [
 1,
@@ -4242,7 +4242,7 @@
 "sha": "269bc440193c"
 },
 {
-"id": "S3-F:ui-design-master/references/icons-tokens-states.md",
+"id": "S3-F:references/icons-tokens-states.md",
 "src": "S3",
 "lines": [
 1,
@@ -4251,7 +4251,7 @@
 "sha": "d68df1262f14"
 },
 {
-"id": "S3-F:ui-design-master/references/industry-playbook-192.md",
+"id": "S3-F:references/industry-playbook-192.md",
 "src": "S3",
 "lines": [
 1,
@@ -4260,7 +4260,7 @@
 "sha": "edef6d3a35da"
 },
 {
-"id": "S3-F:ui-design-master/references/layout-platform.md",
+"id": "S3-F:references/layout-platform.md",
 "src": "S3",
 "lines": [
 1,
@@ -4521,7 +4521,7 @@
 "sha": "65c5e97aad55"
 },
 {
-"id": "S3-F:ui-design-master/references/motion-and-charts.md",
+"id": "S3-F:references/motion-and-charts.md",
 "src": "S3",
 "lines": [
 1,
@@ -4530,7 +4530,7 @@
 "sha": "623a0dd3238a"
 },
 {
-"id": "S3-F:ui-design-master/references/page-patterns.md",
+"id": "S3-F:references/page-patterns.md",
 "src": "S3",
 "lines": [
 1,
@@ -4539,7 +4539,7 @@
 "sha": "aee1d351f39a"
 },
 {
-"id": "S3-F:ui-design-master/references/pro-rules-and-predelivery.md",
+"id": "S3-F:references/pro-rules-and-predelivery.md",
 "src": "S3",
 "lines": [
 1,
@@ -4548,7 +4548,7 @@
 "sha": "a51e94ac15c6"
 },
 {
-"id": "S3-F:ui-design-master/references/scorecard-and-evidence.md",
+"id": "S3-F:references/scorecard-and-evidence.md",
 "src": "S3",
 "lines": [
 1,
@@ -4557,7 +4557,7 @@
 "sha": "b04eafb1b16b"
 },
 {
-"id": "S3-F:ui-design-master/references/style-matrix.md",
+"id": "S3-F:references/style-matrix.md",
 "src": "S3",
 "lines": [
 1,
@@ -4566,7 +4566,7 @@
 "sha": "f2f212d437f9"
 },
 {
-"id": "S3-F:ui-design-master/references/tests-gates.md",
+"id": "S3-F:references/tests-gates.md",
 "src": "S3",
 "lines": [
 1,
@@ -4575,7 +4575,7 @@
 "sha": "2c2d87717b64"
 },
 {
-"id": "S3-F:ui-design-master/references/typography-pairings-74.md",
+"id": "S3-F:references/typography-pairings-74.md",
 "src": "S3",
 "lines": [
 1,
@@ -4584,7 +4584,7 @@
 "sha": "71c0b78d7725"
 },
 {
-"id": "S3-F:ui-design-master/references/typography-rules.md",
+"id": "S3-F:references/typography-rules.md",
 "src": "S3",
 "lines": [
 1,
@@ -4593,7 +4593,7 @@
 "sha": "e076f3dc165a"
 },
 {
-"id": "S3-F:ui-design-master/references/ux-rules-full.md",
+"id": "S3-F:references/ux-rules-full.md",
 "src": "S3",
 "lines": [
 1,
@@ -4602,7 +4602,7 @@
 "sha": "30aef8c8737d"
 },
 {
-"id": "S3-F:ui-design-master/references/visual-craft.md",
+"id": "S3-F:references/visual-craft.md",
 "src": "S3",
 "lines": [
 1,
@@ -4611,7 +4611,7 @@
 "sha": "6b3e1038e1be"
 },
 {
-"id": "S3-F:ui-design-master/references/visual-tokens-recipes.md",
+"id": "S3-F:references/visual-tokens-recipes.md",
 "src": "S3",
 "lines": [
 1,
@@ -4620,7 +4620,7 @@
 "sha": "aad8eae6b6b3"
 },
 {
-"id": "S3-F:ui-design-master/scripts/check_devanagari.py",
+"id": "S3-F:scripts/check_devanagari.py",
 "src": "S3",
 "lines": [
 1,
@@ -4629,7 +4629,7 @@
 "sha": "c9e1f3fb75fa"
 },
 {
-"id": "S3-F:ui-design-master/scripts/contrast_check.py",
+"id": "S3-F:scripts/contrast_check.py",
 "src": "S3",
 "lines": [
 1,
@@ -4638,7 +4638,7 @@
 "sha": "af2127773aff"
 },
 {
-"id": "S3-F:ui-design-master/scripts/core.py",
+"id": "S3-F:scripts/core.py",
 "src": "S3",
 "lines": [
 1,
@@ -4647,7 +4647,7 @@
 "sha": "c3be4b23e715"
 },
 {
-"id": "S3-F:ui-design-master/scripts/design_system.py",
+"id": "S3-F:scripts/design_system.py",
 "src": "S3",
 "lines": [
 1,
@@ -4656,7 +4656,7 @@
 "sha": "e7d1c94c4b2e"
 },
 {
-"id": "S3-F:ui-design-master/scripts/reasoning_contract.py",
+"id": "S3-F:scripts/reasoning_contract.py",
 "src": "S3",
 "lines": [
 1,
@@ -4665,7 +4665,7 @@
 "sha": "b8bac1af82aa"
 },
 {
-"id": "S3-F:ui-design-master/scripts/search.py",
+"id": "S3-F:scripts/search.py",
 "src": "S3",
 "lines": [
 1,
@@ -4674,7 +4674,7 @@
 "sha": "d54e648fe0ec"
 },
 {
-"id": "S3-F:ui-design-master/scripts/validate_brain.py",
+"id": "S3-F:scripts/validate_brain.py",
 "src": "S3",
 "lines": [
 1,
@@ -4683,7 +4683,7 @@
 "sha": "2d17a6c2d8d2"
 },
 {
-"id": "S3-F:ui-design-master/scripts/validate_data.py",
+"id": "S3-F:scripts/validate_data.py",
 "src": "S3",
 "lines": [
 1,

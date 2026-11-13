@@ -113,8 +113,10 @@ def units_s3(root):
         for f in fs:
             files.append(os.path.join(d, f))
     files.sort()
+    tops = {os.path.relpath(p, root).split(os.sep)[0] for p in files}
+    base = os.path.join(root, tops.pop()) if len(tops) == 1 else root  # ids never carry the archive's own folder name
     for p in files:
-        rel = os.path.relpath(p, root)
+        rel = os.path.relpath(p, base)
         if rel.endswith("master-prompt.xml"):
             L = read_lines(p)
             tags = [i for i, l in enumerate(L) if re.match(r"^  <[A-Za-z_]", l)]
