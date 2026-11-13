@@ -17,6 +17,7 @@
 | Web fetch | works for `code.claude.com`, `raw.githubusercontent.com`; blocked for `support.google.com`, `docs.expo.dev`, `www.w3.org`, GitHub API of other repos | `curl` -> 200 / 200 / `CONNECT tunnel failed, response 403`; WebFetch -> `getaddrinfo ENOTFOUND support.google.com` |
 | Network level | Limited (default allowlist plus package managers) | docs + blocked hosts above |
 | Disk / memory / CPU | 31 GB free / 15.6 GB free / 4 cores | `df -h; free -m; nproc` |
-| Transcripts | session transcript at `~/.claude/projects/-home-user-Boss-skill-/<session>.jsonl`; subagent transcript path recorded after the first launch | `find ~/.claude/projects` |
+| Transcripts | session transcript at `~/.claude/projects/-home-user-Boss-skill-/<session>.jsonl`; each subagent's full JSONL transcript at `/tmp/claude-0/-home-user-Boss-skill-/<session>/tasks/<agentId>.output` (used for the isolation scan with grep, never read into context) | Agent tool launch result |
+| Tree listing of other repos | not possible: github.com HTML -> 403 from the proxy, API -> 403, tarball/CDN probe denied by the sandbox classifier | `curl` -> `403 378 https://github.com/<owner>/<repo>`; denial message |
 | Auto-discovered skills | `~/.claude/skills/synced/` (account skills) and a session plugin exist in this container and are visible to every subagent, all arms alike; recorded as a benchmark limitation | `ls ~/.claude/skills` |
 | `.claude/skills` in repo | absent (must stay absent until PH7) | `ls -a` |
