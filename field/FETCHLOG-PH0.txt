@@ -1,0 +1,22 @@
+# PH0 reachability probes of candidate repos (2026-11-12). Each 200 counts toward the 60-page field cap.
+403 378 https://github.com/obra/superpowers  (proxy refusal, not counted)
+403 378 https://github.com/obra/superpowers/tree/main/skills  (proxy refusal, not counted)
+200 14847 https://raw.githubusercontent.com/obra/superpowers/main/README.md
+200 9390 https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md
+200 116660 https://raw.githubusercontent.com/affaan-m/everything-claude-code/main/README.md
+200 17367 https://raw.githubusercontent.com/pbakaus/impeccable/main/README.md
+200 14337 https://raw.githubusercontent.com/github/spec-kit/main/README.md
+200 40938 https://raw.githubusercontent.com/garrytan/gstack/main/README.md
+200 10682 https://raw.githubusercontent.com/trailofbits/skills/main/README.md
+200 16461 https://raw.githubusercontent.com/mattpocock/skills/main/README.md
+200 8315 https://raw.githubusercontent.com/expo/skills/main/README.md
+200 2052 https://raw.githubusercontent.com/x1xhlol/system-prompts-and-models-of-ai-tools/main/README.md
+200 8085 https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/README.md
+200 25650 https://raw.githubusercontent.com/thedotmack/claude-mem/main/README.md
+200 7273 https://raw.githubusercontent.com/vercel-labs/agent-skills/main/README.md
+200 4794 https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/README.md
+200 329 https://raw.githubusercontent.com/gsd-build/get-shit-done/main/README.md
+200 51862 https://raw.githubusercontent.com/PatrickJS/awesome-cursorrules/main/README.md
+200 10120 https://raw.githubusercontent.com/wshobson/agents/main/README.md
+200 23308 https://raw.githubusercontent.com/EveryInc/compound-engineering-plugin/main/README.md
+# counted: 18 pages. Remaining field budget: 42 new pages.
