@@ -48,7 +48,7 @@ Prompts, system prompts, agent work orders and specs written for an AI executor.
 7. Scope creep: steps not needed for the goal; over-specified methods where only the outcome matters.
 8. Missing failure paths: what happens when a command fails, a test is red, a page is unreachable.
 9. Unverifiable success claims: any place the executor could report done without evidence.
-Run `python3 scripts/prompt_lint.py <file> --json` as an advisory structural check (it is a heuristic, not a quality score). <!-- e23: Without scripts, read the prompt once as the executor and once as a hostile reviewer, and answer the nine questions above in writing. -->
+<!--e1-->Run `python3 scripts/prompt_lint.py <file> --json` as an advisory structural check (it is a heuristic, not a quality score).<!--/e1--> <!-- e23: Without scripts, read the prompt once as the executor and once as a hostile reviewer, and answer the nine questions above in writing. -->
 
 ## R5 Output contract (K7)
 1. The prompt itself in one fenced block or file, ready to paste.

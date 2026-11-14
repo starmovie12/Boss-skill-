@@ -45,7 +45,8 @@ Breakpoints sit where the content breaks, never at device names. Each width gets
 Every number in this file (zones, line lengths, widths, timings) is a heuristic. Override with a one-line note in the layout plan: `rule | why for this screen | what instead`. Never force landing-page heuristics (hero size, sticky action) onto dashboards, forms, settings or dialogs.
 
 ## Gate
-`python3 scripts/placement_check.py --url <page> --plan _boss/layout-plan.md --json` (or via `boss_verify.py`) reports, at 360 and 1280 px: overlapping interactive elements, elements outside the viewport, clipped text, targets under 44 px (48 px for the primary action on mobile), fixed or sticky layers covering content or the primary action, horizontal scroll, and whether the primary action sits in the planned zone. It is a heuristic lint: fix or justify each hit in `_boss/craft-log.md`, and still look at the screenshots.
+<!--e1-->`python3 scripts/placement_check.py --url <page> --plan _boss/layout-plan.md --json` (or via `boss_verify.py`) reports, at 360 and 1280 px: overlapping interactive elements, elements outside the viewport, clipped text, targets under 44 px (48 px for the primary action on mobile), fixed or sticky layers covering content or the primary action, horizontal scroll, and whether the primary action sits in the planned zone. It is a heuristic lint: fix or justify each hit in `_boss/craft-log.md`, and still look at the screenshots.<!--/e1-->
+<!-- e23: Walk the 8-item manual checklist below for every screen at a phone width and a desktop width; fix or justify each failure in `_boss/craft-log.md`. -->
 
 ## 8-item manual checklist (when scripts cannot run)
 1. The plan existed before styling, with five answers per element and one primary action per screen.

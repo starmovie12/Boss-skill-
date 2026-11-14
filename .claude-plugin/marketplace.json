@@ -1,0 +1,14 @@
+{
+  "name": "boss-skill",
+  "owner": {
+    "name": "BOSS maintainers"
+  },
+  "plugins": [
+    {
+      "name": "boss",
+      "source": "./editions/e1-plugin",
+      "description": "BOSS skill: WEB, APP, PROMPT and AUDIT modes",
+      "version": "1.0.0"
+    }
+  ]
+}

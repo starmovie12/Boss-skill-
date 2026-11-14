@@ -12,8 +12,8 @@ Stack and versions (from manifests), entry points (routes, handlers, screens, sc
 Fill the coverage matrix before hunting: one row per class (security, accessibility, performance, SEO, correctness, dependencies, privacy, UX, code health), columns `method | files or pages covered | checked? | result`. Read `references/audit-checklists.md` now and take the hunting list for each in-scope class. A class not checked goes to "Not checked" with the reason; it is never silently dropped.
 
 ## U3 Hunt (static first, then dynamic)
-- Static: read the code paths in the inventory; grep with the checklist patterns; `python3 scripts/secrets_scan.py --root <path> --json`; dependency audit with the ecosystem tool when it can run (`npm audit --json`, `pip-audit`), else list versions and label UNVERIFIED.
-- Dynamic: build and run locally; run the test suite; for UI, `python3 scripts/boss_verify.py --root <path> --json` (axe, placement, screenshots at 360 and 1280 px, bundle size, console errors).
+- Static: read the code paths in the inventory; grep with the checklist patterns; <!--e1-->`python3 scripts/secrets_scan.py --root <path> --json`; <!--/e1--><!-- e23: a search for keys, tokens and passwords (names like SECRET, TOKEN, KEY with long random values, private key blocks);  -->dependency audit with the ecosystem tool when it can run (`npm audit --json`, `pip-audit`), else list versions and label UNVERIFIED.
+- Dynamic: build and run locally; run the test suite; <!--e1-->for UI, `python3 scripts/boss_verify.py --root <path> --json` (axe, placement, screenshots at 360 and 1280 px, bundle size, console errors).<!--/e1--><!-- e23: for UI, the WEB W9 manual verification steps at 360 and 1280 px. -->
 - UI and UX judgment pass first, tool evidence second: write your design and usability findings before reading the tool output, then merge, marking each finding agree, tool-only, judgment-only or false positive. This stops the tools from anchoring the review.
 - Specs and PRDs: walk each section with one yes/no question (present? measurable? states and edge cases named? numbers with units and baselines? owner for open questions?) and use the requirement tests from PROMPT R3; every "no" is a finding with its location.
 
@@ -30,7 +30,7 @@ No finding without evidence. Real defects outside any expected list are welcome.
 Tie-break: would a user contact support or lose money, data or access? Then at least High.
 
 ## U6 Report (output contract)
-Write `findings.json`, then render: `python3 scripts/audit_report.py --findings findings.json --root <path> --out report.md --json`. It checks that every quoted snippet exists at its cited location (within 5 lines), drops nothing silently, and lists unverifiable citations for you to fix or remove. <!-- e23: Without scripts: open each cited file at the cited line and confirm the quoted snippet is there before the report is final; remove or correct any that is not. -->
+<!--e1-->Write `findings.json`, then render: `python3 scripts/audit_report.py --findings findings.json --root <path> --out report.md --json`. It checks that every quoted snippet exists at its cited location (within 5 lines), drops nothing silently, and lists unverifiable citations for you to fix or remove.<!--/e1--><!-- e23: Write the findings in the U4 schema, then the report. --> <!-- e23: Without scripts: open each cited file at the cited line and confirm the quoted snippet is there before the report is final; remove or correct any that is not. -->
 Report order: header (U0); executive summary of at most 10 lines with counts by severity and the three things to fix first; the coverage matrix; findings sorted by severity then class; "Not checked" with reasons; method notes (tools, versions, commands). Never "looks good overall" without the matrix behind it.
 
 ## U7 Fixes (only when asked)

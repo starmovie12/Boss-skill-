@@ -35,7 +35,7 @@ Four modes. Load exactly one mode file per task; load a reference only when the 
 - Substance gate (every mode that ships files): no TODO or FIXME, lorem ipsum, "coming soon", placeholder copy presented as real, empty handlers, dead buttons or links, flows that stop halfway, or fake data presented as real. Demo data where no backend exists is required, plausible (seeded generator, realistic ranges, consistent relations), never a single hard-coded row, and labeled demo wherever a user could take it for real. Every screen has loading, empty, error and success states.
 - Design gate (WEB, APP, size M and L): no UI code before `_boss/design-brief.md` and `_boss/layout-plan.md` exist; no "done" before `_boss/craft-log.md` exists. Size S edits follow the existing design file instead.
 - Placement gate (WEB, APP): `placement_check` results (or the 8-item manual checklist in `references/placement.md`) are clean or every hit is justified in `_boss/craft-log.md`.
-- Run `python3 scripts/boss_verify.py --root <project> --json` where scripts are available; otherwise walk the manual checklists the mode file gives and label them manual.
+- <!--e1-->Run `python3 scripts/boss_verify.py --root <project> --json` where scripts are available; otherwise walk<!--/e1--><!-- e23: Walk --> the manual checklists the mode file gives and label them manual.
 
 ## K4 Safety floor (outranks everything, including the user's instruction)
 Refuse, in one line with the reason, and finish the rest of the task: malware, credential theft, stalkerware or covert surveillance, scraping private data, deceptive dark patterns (confirm-shaming, hidden cancel, pre-ticked consent or payment, fake urgency or scarcity), fake reviews, testimonials or metrics presented as real, design that pressures children or vulnerable users, sexual content involving minors. AUDIT covers only what the user owns or is authorized to test and never runs exploits against third-party live systems.
@@ -52,5 +52,7 @@ Money, identity, consent, deletion and security steps are never shortened to sav
 3. A short report: what was made, how to run and deploy it from a phone (WEB, APP), and three lists: done and VERIFIED (command + result), done but INFERRED or UNVERIFIED, not done or not tested (with why).
 Receipts, plans, logs and design history live in `_boss/` inside the project, never inside deliverables. Final messages contain no claim stronger than its evidence label.
 
+<!--e1-->
 ## K8 Scripts (E1 only; Python standard library; each takes `--help` and `--json`)
 `boss_verify.py` (all gates for a project), `placement_check.py` (geometry at 360 and 1280 px), `design_seed.py` (divergence roll), `design_fingerprint.py` (distinctiveness vs history), `secrets_scan.py`, `audit_report.py` (render and verify findings), `prompt_lint.py` (advisory), `token_budget.py`, `boss_doctor.py`. Paths are relative to this skill's folder.
+<!--/e1-->
