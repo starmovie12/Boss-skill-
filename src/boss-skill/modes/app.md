@@ -21,7 +21,7 @@ Look at 4 to 6 real apps in the domain (or write "from knowledge"). In `_boss/de
 
 ## A4 Design brief (D-2) and divergence (D-3)
 - `_boss/design-brief.md`, at most 400 words: who, where and how they hold the phone (one hand, hurry, outdoors light, data cost), the key task, 3 adjectives plus 1 anti-adjective, the domain lists, the memorable thing every choice serves, light or dark from the use scene.
-- <!--e1-->Run `python3 scripts/design_seed.py --platform app --json`; <!--/e1-->treat the roll as a provocation that domain fit, platform convention and accessibility may override with a written reason. <!-- e23: How to roll: on each axis (density, shape language, type voice, color strategy, imagery, layout archetype, motion character) pick the option you would least reflexively choose. -->
+- <!--e1-->Run `python3 scripts/design_seed.py --platform app --json`. <!--/e1-->Treat the divergence roll as a provocation that domain fit, platform convention and accessibility may override with a written reason. <!-- e23: How to roll: on each axis (density, shape language, type voice, color strategy, imagery, layout archetype, motion character) pick the option you would least reflexively choose. -->
 - Write three directions that differ in at least two layers beyond color and shadow (type, composition, component relationships and signature); choose one with a reason. Category test (does the category alone predict the look? then rebuild one choice from a product fact) and specificity test (at least two elements only this product could have).
 
 ## A5 Layout plan (PL-1 to PL-8)
