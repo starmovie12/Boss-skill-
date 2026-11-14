@@ -1,11 +1,11 @@
 # FORGE_STATE
 
-- phase: PH1b field study (PH1 ledger PASS: 521/521 units, all fated)
+- phase: PH3 skill text written (kernel, 4 modes, 6 references); PH4 scripts next
 - working branch: `claude/hopeful-fermat-35aqea` (mirror: `boss-skill-forge`)
 - last commit: see `git log -1` on the working branch
 - freeze hash: not set
 - pull request: https://github.com/starmovie12/Boss-skill-/pull/1 (opened by the operator from the Claude Code UI; every push to the working branch updates it)
-- next step: run field-study runs F1-F4 (prompts in session; brief at /tmp/forge-field/FIELD-BRIEF.md, rebuild from docs/GAPS.md if lost), then docs/FIELD-SYNTHESIS.md, then PH2 authoring runs A and B (specs in evals/authoring/).
+- next step: write scripts in src/boss-skill/scripts with tests, then build_editions, RULE-AUDIT, OVERMATCH, README.
 
 ## Done
 - PH1 ledger: 521 units fated (`python3 tools/ledger_check.py --skip-field` PASS), digests in ledger/digests/, docs GAPS, FLAWS, STRENGTHS, CONTRADICTIONS, hashed ISOLATION-TOKENS.
