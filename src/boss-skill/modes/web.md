@@ -35,7 +35,7 @@ Study, never clone: no trade dress, logos or copy.
 Read `references/placement.md` now. Write `_boss/layout-plan.md` before any styling: platform (phone if unstated, labeled ASSUMED), every screen and section, every element with its five answers (where, how big, next to and after what, why here, label and rank), the primary action per screen, the requirement-to-element trace table, platform edge cases, and the state and transition map. A requirement with no element is fixed here, before code.
 
 ## W6 Tokens (D-4)
-Read `references/design-system.md` now. Derive tokens from the chosen direction: type scale from base size and ratio, spacing scale, color roles in three tiers with every text/background pair's contrast computed and written in the palette table, radius and elevation from the shape language, motion durations by distance and importance. Write them once (CSS custom properties or the stack's theme file). Never copy tokens from a previous project, a source file, a template or your own earlier output.
+Read `references/design-system.md` now. Derive tokens from the chosen direction: type scale from base size and ratio, spacing scale, color roles in three tiers with every text/background pair's contrast computed and written in the palette table, radius and elevation from the shape language, motion durations by distance and importance. Write them once (CSS custom properties or the stack's theme file) and write the palette table to `_boss/tokens.md`: one row per pair, `role | foreground | background | ratio as N:1 | floor`, so the ratios can be recomputed. Never copy tokens from a previous project, a source file, a template or your own earlier output.
 
 ## W7 First screen and critique (D-5)
 Build the first screen alone, with real content. Screenshot it at 360 and 1280 px: `python3 scripts/boss_verify.py --root <project> --shots-only`. <!-- e23: Without scripts: open the page in a phone browser and a desktop browser (or the browser's responsive mode at 360 and 1280 px) and look at both. --> Then critique against the rubric in `references/design-system.md` DS-9 (hierarchy, rhythm, contrast, density, domain fit, distinctiveness) and the first-glance test: write what a visitor sees first, second and third; the primary action must be among them and the order must match intent. Revise, then build the rest.
@@ -58,7 +58,7 @@ Fix loop: tag each problem P0 (task, safety or critical accessibility broken), P
 2. Write the three weakest points against the DS-9 rubric, fix them, re-shoot. Record before and after in `_boss/craft-log.md`.
 3. Run `python3 scripts/design_fingerprint.py --root <project> --history _boss/design-history.json --json`. If it reports too close to an earlier design, redo W4 and W6 for the failing axes. Then append the new fingerprint (`--append`). <!-- e23: Without scripts: write the palette hue families, the font pair and the section skeleton of this design in _boss/design-history.md and compare them with earlier entries; at least two of the three must differ from every earlier project. -->
 
-## W11 Deliver (K7)
+## W11 Deliver (output contract, K7)
 Files on disk; how to preview on a phone and deploy free from a phone (`references/stacks.md`); the three-list report. A design history entry exists. The receipt names every gate and its result.
 
 ## Habits to avoid as a first reflex (each allowed only when the brief justifies it in one line)

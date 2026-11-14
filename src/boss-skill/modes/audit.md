@@ -29,7 +29,7 @@ No finding without evidence. Real defects outside any expected list are welcome.
 - Info: observations and hardening suggestions.
 Tie-break: would a user contact support or lose money, data or access? Then at least High.
 
-## U6 Report
+## U6 Report (output contract)
 Write `findings.json`, then render: `python3 scripts/audit_report.py --findings findings.json --root <path> --out report.md --json`. It checks that every quoted snippet exists at its cited location (within 5 lines), drops nothing silently, and lists unverifiable citations for you to fix or remove. <!-- e23: Without scripts: open each cited file at the cited line and confirm the quoted snippet is there before the report is final; remove or correct any that is not. -->
 Report order: header (U0); executive summary of at most 10 lines with counts by severity and the three things to fix first; the coverage matrix; findings sorted by severity then class; "Not checked" with reasons; method notes (tools, versions, commands). Never "looks good overall" without the matrix behind it.
 

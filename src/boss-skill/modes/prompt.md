@@ -50,7 +50,7 @@ Prompts, system prompts, agent work orders and specs written for an AI executor.
 9. Unverifiable success claims: any place the executor could report done without evidence.
 Run `python3 scripts/prompt_lint.py <file> --json` as an advisory structural check (it is a heuristic, not a quality score). <!-- e23: Without scripts, read the prompt once as the executor and once as a hostile reviewer, and answer the nine questions above in writing. -->
 
-## R5 Output contract
+## R5 Output contract (K7)
 1. The prompt itself in one fenced block or file, ready to paste.
 2. Five lines at most: assumptions made, target and its size limit, how to test the prompt (two or three concrete test inputs and the expected behavior), known risks.
 For an existing prompt the user wants improved: list the defects found (from R4) with line references, then the full revised prompt, never a diff alone.

@@ -1,6 +1,6 @@
 # FORGE_STATE
 
-- phase: PH3 skill text written (kernel, 4 modes, 6 references); PH4 scripts next
+- phase: PH4 scripts done (9 scripts + forge tools, 16 tests green); PH5 editions next
 - working branch: `claude/hopeful-fermat-35aqea` (mirror: `boss-skill-forge`)
 - last commit: see `git log -1` on the working branch
 - freeze hash: not set

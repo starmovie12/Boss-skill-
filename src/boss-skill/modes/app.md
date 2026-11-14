@@ -28,7 +28,7 @@ Look at 4 to 6 real apps in the domain (or write "from knowledge"). In `_boss/de
 Read `references/placement.md` now. Write `_boss/layout-plan.md` before any styling: per screen, every element with its five answers, the thumb-zone placement of frequent actions, the primary action, the requirement trace table, platform edge cases (Android back gesture and navigation bar, iOS safe areas and swipe-back, tablet, very large font, weak network, app reopened mid-task), and the state and transition map.
 
 ## A6 Tokens (D-4)
-Read `references/design-system.md` now. Derive type scale (respect dynamic type), spacing, color roles with computed contrast in both themes if both ship, radius and elevation, motion durations and haptic intents from the chosen direction, into one theme file read through a theme hook so light and dark switch live. Never copied from earlier work.
+Read `references/design-system.md` now. Derive type scale (respect dynamic type), spacing, color roles with computed contrast in both themes if both ship, radius and elevation, motion durations and haptic intents from the chosen direction, into one theme file read through a theme hook so light and dark switch live; the palette table with every pair's ratio goes to `_boss/tokens.md` (`role | foreground | background | ratio as N:1 | floor`). Never copied from earlier work.
 
 ## A7 Data, storage and permissions
 - Persistence: small key-value data in async storage; relational or large data in SQLite; secrets in the secure store. Writes are optimistic only when reversible, with a visible pending mark and rollback on failure; offline actions queue and say so.
@@ -46,7 +46,7 @@ Fix loop P0 to P3 as in WEB W9: fix every P0 and P1, re-run the same check, at m
 ## A10 Craft pass and distinctiveness (D-6, D-8)
 Screenshot every screen and state (default, loading, empty, error, offline, permission denied) on a small and a large phone viewport; write the three weakest points against DS-9, fix, re-shoot, record before and after in `_boss/craft-log.md`. Run `python3 scripts/design_fingerprint.py --root <project> --history _boss/design-history.json --json`; too close to an earlier design means redo A4 and A6 on the failing axes; then `--append`. <!-- e23: Without scripts: record palette hue families, font pair and screen skeleton in _boss/design-history.md; at least two of the three must differ from every earlier project. -->
 
-## A11 Store readiness and delivery
+## A11 Store readiness and delivery (output contract, K7)
 Before calling an app release-ready: app name, unique bundle id and package name, version and build number, adaptive icon and splash, a privacy policy URL, data-safety and privacy-label answers that match the code's real data collection, permission rationale strings, no debug flags or test keys, crash-free cold start on a low-end device profile. Deliver per K7: how to run it on the phone (Expo Go or an installable preview build), how to build in the cloud and ship updates from a phone (`references/stacks.md`), and the three-list report.
 
 ## Domain seeds
