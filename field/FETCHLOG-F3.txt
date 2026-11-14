@@ -1,0 +1,17 @@
+# F3 fetch log (counted READMEs marked 'counted')
+200 14337 https://raw.githubusercontent.com/github/spec-kit/main/README.md (counted)
+200 8085 https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/README.md (counted)
+200 329 https://raw.githubusercontent.com/gsd-build/get-shit-done/main/README.md (counted)
+200 2052 https://raw.githubusercontent.com/x1xhlol/system-prompts-and-models-of-ai-tools/main/README.md (counted)
+200 4556 https://raw.githubusercontent.com/github/spec-kit/main/templates/spec-template.md
+200 3770 https://raw.githubusercontent.com/github/spec-kit/main/templates/plan-template.md
+200 11764 https://raw.githubusercontent.com/github/spec-kit/main/templates/commands/analyze.md
+200 19507 https://raw.githubusercontent.com/github/spec-kit/main/templates/commands/clarify.md
+200 1642 https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/skills/method/bmad-build/SKILL.md
+200 4110 https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/skills/method/bmad-build/workflow.md
+200 11361 https://raw.githubusercontent.com/bmad-code-org/BMAD-METHOD/main/skills/method/bmad-build/step-01-clarify-and-route.md
+200 5922 https://raw.githubusercontent.com/open-gsd/gsd-core/main/README.md
+200 13012 https://raw.githubusercontent.com/open-gsd/gsd-core/main/docs/explanation/context-engineering.md
+200 46186 https://raw.githubusercontent.com/x1xhlol/system-prompts-and-models-of-ai-tools/main/v0%20Prompts%20and%20Tools/Prompt.txt
+200 20301 https://raw.githubusercontent.com/x1xhlol/system-prompts-and-models-of-ai-tools/main/Lovable/Agent%20Prompt.txt
+200 31947 https://raw.githubusercontent.com/x1xhlol/system-prompts-and-models-of-ai-tools/main/Kiro/Spec_Prompt.txt
