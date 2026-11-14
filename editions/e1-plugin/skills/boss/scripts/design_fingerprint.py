@@ -93,12 +93,14 @@ def type_axis(texts):
                 heading = fam
             if body is None and re.search(r"\bbody\b|\bhtml\b|:root|\bp\b", sel):
                 body = fam
-        for m in re.finditer(r"--[\w-]*(heading|display|title|body|text|sans|serif)[\w-]*\s*:\s*([^;}{]+)", t):
-            fam = first_family(m.group(2))
-            if fam and m.group(1) in ("heading", "display", "title") and heading is None:
-                heading = fam
-            elif fam and body is None:
-                body = fam
+        for m in re.finditer(r"--(?:font|family|typeface|ff)[\w-]*\s*:\s*([^;}{]+)", t):
+            name, fam = m.group(0).split(":")[0].lower(), first_family(m.group(1))
+            if not fam or fam.startswith("#") or re.match(r"[\d.]", fam):
+                continue
+            if re.search(r"heading|display|title|head", name):
+                heading = heading or fam
+            elif not re.search(r"mono|code|hindi|deva|script", name):
+                body = body or fam
         for m in re.finditer(r"fontFamily\s*:\s*['\"]([^'\"]+)['\"]", t):
             fam = first_family(m.group(1))
             if fam:

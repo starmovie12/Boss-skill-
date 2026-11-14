@@ -95,12 +95,16 @@ const [,, url, widthsCsv, primaryLabel, shotDir, axePath, blockExternal] = proce
           prim = { found: true, label: label(primary).slice(0, 60), zone, pinned: fixedAnc, size: Math.round(r.width) + 'x' + Math.round(r.height), covered: !!(cov && cov.visible && !cov.clear) }; } }
       return { vw, vh, interactive: els.length, hscroll, scrollWidth: document.documentElement.scrollWidth, overlaps, offscreen, small, clipped, covered, primary: prim };
     }, [primaryLabel || '']);
-    if (axePath) { try { await page.addScriptTag({ content: fs.readFileSync(axePath, 'utf8') });
-        const ax = await page.evaluate(async () => { const r = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'] } });
-          return r.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.length, help: v.help })); });
-        res.axe = ax; } catch (e) { res.axe_error = String(e.message || e); } }
     if (shotDir) { fs.mkdirSync(shotDir, { recursive: true }); await page.screenshot({ path: shotDir + '/shot-' + w + '.png', fullPage: true }); res.screenshot = shotDir + '/shot-' + w + '.png'; }
-    res.width = w; res.errors = errors; out.push(res); await page.close(); }
+    res.width = w; res.errors = errors; await page.close();
+    if (axePath) { // separate page with CSP bypass so the injected checker cannot be blocked by the page's own policy
+      const ap = await browser.newPage({ viewport: { width: w, height: w < 600 ? 780 : 800 }, bypassCSP: true });
+      try { await ap.goto(url, { waitUntil: 'networkidle', timeout: 30000 }); await ap.addScriptTag({ content: fs.readFileSync(axePath, 'utf8') });
+        res.axe = await ap.evaluate(async () => { const r = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'] } });
+          return r.violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.length, help: v.help })); });
+      } catch (e) { res.axe_error = String(e.message || e).slice(0, 300); }
+      await ap.close(); }
+    out.push(res); }
   await browser.close(); process.stdout.write(JSON.stringify(out));
 })().catch(e => { console.error(String(e && e.stack || e)); process.exit(3); });
 """
@@ -269,9 +273,11 @@ def main():
     axe = [v for r in results for v in r.get("axe", []) if v.get("impact") in ("serious", "critical")]
     out = {"check": "placement_check", "mode": "browser", "url": url, "widths": widths, "hits": hits,
            "primary_plan": plan[0] if plan else None, "per_width": [{k: r.get(k) for k in ("width", "interactive", "primary", "screenshot", "errors")} for r in results]}
+    axe_err = [r["axe_error"] for r in results if r.get("axe_error")]
     if a.axe:
         out["axe_serious_critical"] = axe
-    return emit(out, a.json, ok=not hits and not axe)
+        out["axe_status"] = "NOT-RUN: " + axe_err[0] if axe_err else "ran"
+    return emit(out, a.json, ok=not hits and not axe and not axe_err)
 
 
 if __name__ == "__main__":

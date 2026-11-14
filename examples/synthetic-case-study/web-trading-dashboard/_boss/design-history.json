@@ -1,0 +1,38 @@
+{
+ "entries": [
+  {
+   "palette": {
+    "hue_families": [
+     0,
+     150,
+     210
+    ],
+    "background": "dark"
+   },
+   "type": {
+    "heading": "segoe ui",
+    "body": "segoe ui"
+   },
+   "skeleton": {
+    "kind": "web",
+    "sequence": [
+     "header",
+     "main",
+     "section",
+     "table",
+     "watchlist",
+     "chart",
+     "ticket",
+     "order",
+     "section",
+     "table",
+     "order",
+     "dialog",
+     "footer"
+    ]
+   },
+   "name": "tarang-demo-desk",
+   "date": "2026-11-14"
+  }
+ ]
+}

@@ -247,9 +247,13 @@ def main():
                 results.append(check("placement", "FAIL" if hits else "PASS", hits[:30] or "no geometry hits at 360 and 1280 px"))
                 errs = [e for r in res for e in r.get("errors", [])]
                 results.append(check("console", "FAIL" if errs else "PASS", errs[:10] or "no console errors"))
-                if axe:
+                axe_err = [r["axe_error"] for r in res if r.get("axe_error")]
+                if axe and axe_err:
+                    results.append(check("axe", "NOT-RUN", "axe could not run: %s" % axe_err[0]))
+                elif axe:
                     v = [x for r in res for x in r.get("axe", []) if x.get("impact") in ("serious", "critical")]
-                    results.append(check("axe", "FAIL" if v else "PASS", ["%s (%s) x%d: %s" % (x["id"], x["impact"], x["nodes"], x["help"]) for x in v][:20] or "0 serious or critical"))
+                    ran = sum(1 for r in res if "axe" in r)
+                    results.append(check("axe", "FAIL" if v else "PASS", ["%s (%s) x%d: %s" % (x["id"], x["impact"], x["nodes"], x["help"]) for x in v][:20] or "0 serious or critical at %d widths" % ran))
                 else:
                     results.append(check("axe", "NOT-RUN", "axe-core not resolvable; add it as a dev dependency to enable"))
     elif not a.shots_only:

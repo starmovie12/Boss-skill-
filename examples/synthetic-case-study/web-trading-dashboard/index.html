@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Tarang demo desk: watchlist, chart, order ticket and portfolio</title>
+<meta name="description" content="A demo trading desk with simulated market data: watchlist, price chart, order ticket with confirmation, and portfolio. No real money or real orders.">
+<meta property="og:title" content="Tarang demo desk">
+<meta property="og:description" content="Simulated broker dashboard built as a worked example. Demo data only.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#ticket">Skip to the order ticket</a>
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true"></span><span>Tarang <small>demo desk</small></span></div>
+  <p class="status" id="market-status" role="status" aria-live="polite">Connecting to the demo feed</p>
+  <button type="button" class="ghost" id="pause">Pause demo feed</button>
+</header>
+<p class="demo-note">Demo data from a seeded simulator. Prices, orders and holdings are not real; no order leaves this page.</p>
+
+<main class="desk">
+  <section class="summary" aria-labelledby="pf-title">
+    <h1 id="pf-title" class="label">Portfolio value</h1>
+    <p class="hero-number" id="pf-value">&nbsp;</p>
+    <p class="change" id="pf-change">&nbsp;</p>
+    <dl class="mini">
+      <div><dt>Invested</dt><dd id="pf-invested">&nbsp;</dd></div>
+      <div><dt>Total P&amp;L</dt><dd id="pf-pnl">&nbsp;</dd></div>
+      <div><dt>Margin available</dt><dd id="pf-margin">&nbsp;</dd></div>
+    </dl>
+  </section>
+
+  <section class="watch" aria-labelledby="wl-title">
+    <div class="section-head"><h2 id="wl-title">Watchlist</h2><span class="hint">Tap a row to load it in the chart and ticket</span></div>
+    <div class="table-wrap" tabindex="0" role="region" aria-labelledby="wl-title">
+      <table id="watchlist" aria-describedby="wl-title">
+        <thead><tr><th scope="col">Instrument</th><th scope="col" class="num">Last</th><th scope="col" class="num">Change</th></tr></thead>
+        <tbody id="wl-body"><tr class="skeleton"><td colspan="3">Loading prices</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="chart" aria-labelledby="ch-title">
+    <div class="section-head"><h2 id="ch-title">Price, last 90 ticks</h2><span class="hint" id="ch-symbol"></span></div>
+    <svg id="chart" viewBox="0 0 600 200" preserveAspectRatio="none" role="img" aria-labelledby="ch-desc"><title id="ch-desc">Price chart</title></svg>
+    <dl class="stats" id="stats"></dl>
+  </section>
+
+  <section class="ticket" id="ticket" aria-labelledby="tk-title">
+    <h2 id="tk-title">Order ticket</h2>
+    <form id="order-form" novalidate>
+      <fieldset class="side">
+        <legend>Side</legend>
+        <label class="pill buy"><input type="radio" name="side" value="BUY" checked> Buy</label>
+        <label class="pill sell"><input type="radio" name="side" value="SELL"> Sell</label>
+      </fieldset>
+      <p class="instrument" id="tk-instrument">Select an instrument</p>
+      <div class="row">
+        <label for="qty">Quantity</label>
+        <input id="qty" name="qty" type="number" inputmode="numeric" min="1" step="1" value="10" required aria-describedby="qty-err">
+        <p class="error" id="qty-err" hidden></p>
+      </div>
+      <fieldset class="type">
+        <legend>Order type</legend>
+        <label class="pill"><input type="radio" name="otype" value="MARKET" checked> Market</label>
+        <label class="pill"><input type="radio" name="otype" value="LIMIT"> Limit</label>
+      </fieldset>
+      <div class="row" id="price-row" hidden>
+        <label for="price">Limit price</label>
+        <input id="price" name="price" type="number" inputmode="decimal" step="0.05" aria-describedby="price-err">
+        <p class="error" id="price-err" hidden></p>
+      </div>
+      <dl class="estimate">
+        <div><dt>Estimated value</dt><dd id="est-value">&nbsp;</dd></div>
+        <div><dt>Charges (estimate)</dt><dd id="est-charges">&nbsp;</dd></div>
+        <div><dt>Margin needed / available</dt><dd id="est-margin">&nbsp;</dd></div>
+      </dl>
+      <p class="note" id="mkt-note">Market orders fill at the next demo price, which can differ from the price shown.</p>
+      <button type="submit" class="primary" id="review">Review order</button>
+    </form>
+  </section>
+
+  <section class="holdings" aria-labelledby="hd-title">
+    <h2 id="hd-title">Holdings</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-labelledby="hd-title">
+      <table>
+        <thead><tr><th scope="col">Instrument</th><th scope="col" class="num">Qty</th><th scope="col" class="num">Value</th><th scope="col" class="num">P&amp;L</th></tr></thead>
+        <tbody id="hd-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="orders" aria-labelledby="or-title">
+    <h2 id="or-title">Orders today</h2>
+    <ul id="orders" class="orders-list"></ul>
+    <p class="empty" id="orders-empty">No orders yet. Orders you place appear here with their status.</p>
+  </section>
+</main>
+
+<dialog id="confirm" aria-labelledby="cf-title">
+  <h2 id="cf-title">Confirm order</h2>
+  <p id="cf-sentence"></p>
+  <dl class="estimate" id="cf-figures"></dl>
+  <p class="error" id="cf-error" role="alert" hidden></p>
+  <div class="dialog-actions">
+    <button type="button" class="ghost" id="cf-edit">Edit order</button>
+    <button type="button" class="primary" id="cf-place">Place order</button>
+  </div>
+</dialog>
+<footer class="foot"><p>Investments in securities are subject to market risk. This page is a design example with simulated data; it is not investment advice and places no real orders. Verify current regulator rules before using any text from it.</p></footer>
+</body>
+</html>
