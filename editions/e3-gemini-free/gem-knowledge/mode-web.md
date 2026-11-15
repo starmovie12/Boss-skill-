@@ -4,7 +4,7 @@ Websites, landing pages, web apps, dashboards. Steps run in order; size S skips 
 
 ## W0 Intake
 - Brownfield (P-6): read the manifest, routes, the existing tokens or design file, and run the existing build and tests before touching anything. Decide refine (keep identity, change only what is asked) or redesign (keep content and function, move away from the old look); write the choice in one line.
-- Greenfield: pick the stack from `ref-stacks-and-fintech.md` (static, Vite SPA, or a framework for many SEO pages) and the free host the user can deploy to from a phone.
+- Greenfield: pick the stack from `ref-stacks-fintech-india.md` (static, Vite SPA, or a framework for many SEO pages) and the free host the user can deploy to from a phone.
 - Write `_boss/acceptance.md` before any design: one row per requirement in the brief plus the floors below: `requirement | how it is checked | pass condition`. Never edit a criterion after seeing the design.
 
 ## W1 Floors (always on)
@@ -59,10 +59,10 @@ Fix loop: tag each problem P0 (task, safety or critical accessibility broken), P
 3.  Without scripts: write the palette hue families, the font pair and the section skeleton of this design in _boss/design-history.md and compare them with earlier entries; at least two of the three must differ from every earlier project.
 
 ## W11 Deliver (output contract, K7)
-Files on disk; how to preview on a phone and deploy free from a phone (`ref-stacks-and-fintech.md`); the three-list report. A design history entry exists. The receipt names every gate and its result.
+Files on disk; how to preview on a phone and deploy free from a phone (`ref-stacks-fintech-india.md`); the three-list report. A design history entry exists. The receipt names every gate and its result.
 
 ## Habits to avoid as a first reflex (each allowed only when the brief justifies it in one line)
 A purple-to-blue gradient on white; a centered hero over a blurred blob, then three equal feature cards, then a testimonial carousel; every block in a card with the same radius and shadow; glass effects on content surfaces; gradient text; emoji as icons; one default sans (Inter, Roboto, Arial) at one weight for everything; dark mode chosen because it looks "premium"; stock-photo people smiling at laptops; "Get started" and "Learn more" as the only calls to action; a 2x2 grid of equal statistic cards on a dashboard.
 
 ## Domain seeds
-Broker, trading or investing products: read `ref-stacks-and-fintech.md` at W2.
+Broker, trading or investing products: read `ref-stacks-fintech-india.md` at W2. Audience in India or Indic-language content: read `ref-stacks-fintech-india.md` at W2.

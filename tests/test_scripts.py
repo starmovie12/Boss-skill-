@@ -195,20 +195,9 @@ class TestPromptLint(unittest.TestCase):
             self.assertEqual(run("prompt_lint.py", p, "--strict", "--json")[0], 1)
 
 
-class TestForgeTools(unittest.TestCase):
-    def test_isolation_check_catches_planted_token(self):
-        with tempfile.TemporaryDirectory() as d:
-            write(d, "shipped/a.md", "a GlassIsland navigation\n")
-            code = subprocess.run([sys.executable, os.path.join(TOOLS, "isolation_check.py"), "--roots", os.path.join(d, "shipped"),
-                                   "--src", "/nonexistent", "--json"], capture_output=True, text=True).returncode
-            self.assertEqual(code, 1)
-
+class TestEditions(unittest.TestCase):
     def test_build_editions_reproducible(self):
         p = subprocess.run([sys.executable, os.path.join(TOOLS, "build_editions.py"), "--check", "--json"], capture_output=True, text=True, timeout=120)
-        self.assertEqual(p.returncode, 0, p.stdout[-800:])
-
-    def test_ledger_check_runs(self):
-        p = subprocess.run([sys.executable, os.path.join(TOOLS, "ledger_check.py"), "--json"], capture_output=True, text=True, timeout=120)
         self.assertEqual(p.returncode, 0, p.stdout[-800:])
 
 

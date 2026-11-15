@@ -65,4 +65,4 @@ Files on disk; how to preview on a phone and deploy free from a phone (`referenc
 A purple-to-blue gradient on white; a centered hero over a blurred blob, then three equal feature cards, then a testimonial carousel; every block in a card with the same radius and shadow; glass effects on content surfaces; gradient text; emoji as icons; one default sans (Inter, Roboto, Arial) at one weight for everything; dark mode chosen because it looks "premium"; stock-photo people smiling at laptops; "Get started" and "Learn more" as the only calls to action; a 2x2 grid of equal statistic cards on a dashboard.
 
 ## Domain seeds
-Broker, trading or investing products: read `references/domains/fintech-trading.md` at W2.
+Broker, trading or investing products: read `references/domains/fintech-trading.md` at W2. Audience in India or Indic-language content: read `references/india.md` at W2.

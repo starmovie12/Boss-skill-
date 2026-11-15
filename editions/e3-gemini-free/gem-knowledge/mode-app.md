@@ -4,7 +4,7 @@ Mobile apps. Steps run in order; size S skips A3 to A5 and follows the existing 
 
 ## A0 Intake and stack
 - Brownfield (P-6): read `package.json`, the app config, navigation setup and theme file; run typecheck, lint and tests before and after; keep the existing design system unless a redesign is asked.
-- Stack (details in `ref-stacks-and-fintech.md`): Expo with TypeScript by default; a PWA when no native API is needed and install-from-browser is enough; bare native only when a required native module cannot work through Expo config plugins. Write the choice and reason in one line.
+- Stack (details in `ref-stacks-fintech-india.md`): Expo with TypeScript by default; a PWA when no native API is needed and install-from-browser is enough; bare native only when a required native module cannot work through Expo config plugins. Write the choice and reason in one line.
 - Write `_boss/acceptance.md` before design: `requirement | how it is checked | pass condition`, one row per brief requirement plus the floors in A1. Never edit a criterion after seeing the design.
 
 ## A1 Floors (always on)
@@ -47,7 +47,7 @@ Fix loop P0 to P3 as in WEB W9: fix every P0 and P1, re-run the same check, at m
 Screenshot every screen and state (default, loading, empty, error, offline, permission denied) on a small and a large phone viewport; write the three weakest points against DS-9, fix, re-shoot, record before and after in `_boss/craft-log.md`.  Without scripts: record palette hue families, font pair and screen skeleton in _boss/design-history.md; at least two of the three must differ from every earlier project.
 
 ## A11 Store readiness and delivery (output contract, K7)
-Before calling an app release-ready: app name, unique bundle id and package name, version and build number, adaptive icon and splash, a privacy policy URL, data-safety and privacy-label answers that match the code's real data collection, permission rationale strings, no debug flags or test keys, crash-free cold start on a low-end device profile. Deliver per K7: how to run it on the phone (Expo Go or an installable preview build), how to build in the cloud and ship updates from a phone (`ref-stacks-and-fintech.md`), and the three-list report.
+Before calling an app release-ready: app name, unique bundle id and package name, version and build number, adaptive icon and splash, a privacy policy URL, data-safety and privacy-label answers that match the code's real data collection, permission rationale strings, no debug flags or test keys, crash-free cold start on a low-end device profile. Deliver per K7: how to run it on the phone (Expo Go or an installable preview build), how to build in the cloud and ship updates from a phone (`ref-stacks-fintech-india.md`), and the three-list report.
 
 ## Domain seeds
-Broker, trading or investing apps: read `ref-stacks-and-fintech.md` at A3.
+Broker, trading or investing apps: read `ref-stacks-fintech-india.md` at A3. Audience in India or Indic-language content: read `ref-stacks-fintech-india.md` at A3.

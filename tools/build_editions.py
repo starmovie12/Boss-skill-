@@ -28,7 +28,7 @@ E23 = re.compile(r"<!-- e23: ?(.*?) ?-->", re.S)
 RENAME = {"modes/web.md": "mode-web.md", "modes/app.md": "mode-app.md", "modes/prompt.md": "mode-prompt.md",
           "modes/audit.md": "mode-audit.md", "references/placement.md": "ref-placement.md",
           "references/design-system.md": "ref-design-system.md", "references/quality-gates.md": "ref-quality-gates.md",
-          "references/stacks.md": "ref-stacks.md", "references/audit-checklists.md": "ref-audit-checklists.md",
+          "references/stacks.md": "ref-stacks.md", "references/india.md": "ref-india.md", "references/audit-checklists.md": "ref-audit-checklists.md",
           "references/domains/fintech-trading.md": "ref-fintech-trading.md"}
 
 
@@ -119,15 +119,19 @@ def build_e3(out):
     k = os.path.join(base, "gem-knowledge")
     write(os.path.join(k, "core.md"), for_e23(read(os.path.join(SRC, "SKILL.md"))))
     for src, dst in RENAME.items():
-        if dst in ("ref-stacks.md", "ref-fintech-trading.md"):
+        if dst in ("ref-stacks.md", "ref-fintech-trading.md", "ref-india.md"):
             continue
         write(os.path.join(k, dst), for_e23(read(os.path.join(SRC, src))))
-    merged = for_e23(read(os.path.join(SRC, "references/stacks.md"))) + "\n" + for_e23(read(os.path.join(SRC, "references/domains/fintech-trading.md")))
-    merged = merged.replace("ref-stacks.md", "ref-stacks-and-fintech.md").replace("ref-fintech-trading.md", "ref-stacks-and-fintech.md")
-    write(os.path.join(k, "ref-stacks-and-fintech.md"), tidy(merged))
+    merged = "\n".join(for_e23(read(os.path.join(SRC, r))) for r in ("references/stacks.md", "references/domains/fintech-trading.md", "references/india.md"))
+    for old in ("ref-stacks.md", "ref-fintech-trading.md", "ref-india.md"):
+        merged = merged.replace(old, "ref-stacks-fintech-india.md")
+    write(os.path.join(k, "ref-stacks-fintech-india.md"), tidy(merged))
     for p in sorted(os.listdir(k)):
         fp = os.path.join(k, p)
-        write(fp, read(fp).replace("ref-stacks.md", "ref-stacks-and-fintech.md").replace("ref-fintech-trading.md", "ref-stacks-and-fintech.md"))
+        t = read(fp)
+        for old in ("ref-stacks.md", "ref-fintech-trading.md", "ref-india.md"):
+            t = t.replace(old, "ref-stacks-fintech-india.md")
+        write(fp, t)
     write(os.path.join(base, "README.md"), tidy("""# BOSS for Gemini (Gem), no scripts
 
 1. Gemini app or gemini.google.com: Gems, New Gem (if your account shows "skills" instead of Gems, use the same text there).

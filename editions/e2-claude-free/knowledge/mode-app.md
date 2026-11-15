@@ -50,4 +50,4 @@ Screenshot every screen and state (default, loading, empty, error, offline, perm
 Before calling an app release-ready: app name, unique bundle id and package name, version and build number, adaptive icon and splash, a privacy policy URL, data-safety and privacy-label answers that match the code's real data collection, permission rationale strings, no debug flags or test keys, crash-free cold start on a low-end device profile. Deliver per K7: how to run it on the phone (Expo Go or an installable preview build), how to build in the cloud and ship updates from a phone (`ref-stacks.md`), and the three-list report.
 
 ## Domain seeds
-Broker, trading or investing apps: read `ref-fintech-trading.md` at A3.
+Broker, trading or investing apps: read `ref-fintech-trading.md` at A3. Audience in India or Indic-language content: read `ref-india.md` at A3.
