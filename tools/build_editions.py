@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """build_editions.py - compile the three BOSS editions from src/boss-skill (deterministic, byte-identical rebuilds).
 
-E1 editions/e1-plugin/      Claude Code plugin (manifest + skills/boss/) and boss-skill.zip for upload on claude.ai.
+E1 editions/e1-plugin/      Claude Code plugin (manifest + skills/boss/) and boss-skill.zip; the same archive is written
+                            to the repo root as boss.skill for one-tap download and upload on claude.ai.
 E2 editions/e2-claude-free/ project-instructions.md (core), knowledge/ (mode-*.md, ref-*.md), paste/ (single-message
                             fallback files), all script-free.
 E3 editions/e3-gemini-free/ gem-instructions.txt (from editions-src, <= 4,000 characters) and gem-knowledge/ (10 files).
@@ -80,7 +81,13 @@ def build_e1(out):
                 "description": "BOSS: build websites and apps with a fresh, domain-fitted design and verified placement, write agent work orders, and audit with verified citations.",
                 "license": "MIT"}
     write(os.path.join(out, "e1-plugin", ".claude-plugin", "plugin.json"), json.dumps(manifest, indent=2) + "\n")
-    zpath = os.path.join(out, "e1-plugin", "boss-skill.zip")
+    write_zip(os.path.join(out, "e1-plugin", "boss-skill.zip"), skill)
+    write_zip(os.path.join(REPO, "boss.skill"), skill)  # one-tap download at the repo root; same bytes as the zip
+
+
+def write_zip(zpath, skill):
+    """Deterministic archive with a top-level boss/ folder (the .skill format is the same zip)."""
+    os.makedirs(os.path.dirname(zpath), exist_ok=True)
     with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
         for d, dirs, files in os.walk(skill):
             dirs.sort()

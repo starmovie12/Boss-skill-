@@ -14,6 +14,15 @@ report with evidence labels. It ships no palettes, fonts or layout templates: ev
 operator to save tokens; see Limitations). Nothing here claims BOSS produces better output than the sources; that is
 an open hypothesis for the next session.
 
+## Download `boss.skill` (one tap)
+
+**https://github.com/starmovie12/Boss-skill-/raw/main/boss.skill**
+
+Open that link on your phone: the file `boss.skill` downloads directly (do not use GitHub's green "Code > Download ZIP"
+button, which downloads the whole repository). Then on claude.ai: Settings, Capabilities, Skills, upload `boss.skill`
+(menu names may differ by plan and app version: UNVERIFIED). Inside, it is the standard skill archive: a `boss/` folder
+with `SKILL.md`, `modes/`, `references/` and `scripts/`.
+
 ## Install (phone-first)
 
 ### E1: Claude Code on the web (your project repo)
@@ -21,8 +30,7 @@ an open hypothesis for the next session.
 2. Paste: `Copy the folder editions/e1-plugin/skills/boss from https://github.com/starmovie12/Boss-skill- (branch main once the PR is merged) into .claude/skills/boss in this repo, commit and push.`
 3. Start a new session on that repo; ask for a website, app, prompt or audit. Cloud sessions load skills committed under `.claude/skills/` (docs, verified 2026-11-12).
 
-E1 on claude.ai (Skills upload, if your plan shows it; menu names UNVERIFIED): download `editions/e1-plugin/boss-skill.zip`
-from GitHub, then Settings, Capabilities, Skills, Upload, choose the zip.
+E1 on claude.ai: use the `boss.skill` download above (the same archive also exists as `editions/e1-plugin/boss-skill.zip`).
 
 ### E2: Claude.ai Project (free or paid; no scripts)
 1. claude.ai, Projects, New project, name it BOSS.
