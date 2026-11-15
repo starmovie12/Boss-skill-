@@ -1,0 +1,28 @@
+{
+ "scope": {"target": "examples/synthetic-case-study/audit/fixture", "method": "static review, no server started", "authorization": "fictional fixture written for this example", "in_scope": "server.js, index.html", "out_of_scope": "app.js (not present), deployment"},
+ "coverage": [
+  {"class": "security", "method": "read handlers", "covered": "server.js", "checked": true, "result": "2 findings"},
+  {"class": "accessibility", "method": "read markup", "covered": "index.html", "checked": true, "result": "2 findings"},
+  {"class": "correctness", "method": "read handlers", "covered": "server.js", "checked": true, "result": "1 finding"},
+  {"class": "performance", "method": "none", "covered": "", "checked": false, "reason": "no build output or runtime in scope"},
+  {"class": "dependencies", "method": "none", "covered": "", "checked": false, "reason": "no lockfile in the fixture"}
+ ],
+ "findings": [
+  {"id": "SEC-001", "title": "Any caller can read any order (no ownership check)", "class": "security", "severity": "high", "location": "server.js:9",
+   "evidence": "const order = orders.get(req.params.id);", "reproduction": "GET /api/orders/1 with any or no x-user header returns another user's order.",
+   "impact": "Order details of every user are exposed by enumerating ids.", "fix": "Look up the order, then return 404 unless order.owner equals the authenticated user id from the session (not a client header).", "confidence": "INFERRED"},
+  {"id": "SEC-002", "title": "Identity taken from a client-supplied header", "class": "security", "severity": "high", "location": "server.js:20",
+   "evidence": "orders.set(id, { id, qty, price, owner: req.headers[\"x-user\"] });", "reproduction": "POST /api/orders with x-user: someone-else creates an order owned by that user.",
+   "impact": "Anyone can act as anyone.", "fix": "Derive the owner from a verified session or token on the server.", "confidence": "INFERRED"},
+  {"id": "COR-001", "title": "Order quantity and price are not validated", "class": "correctness", "severity": "high", "location": "server.js:15",
+   "evidence": "const { qty, price } = req.body;\n  const cost = qty * price;", "reproduction": "POST {\"qty\": -10, \"price\": 100} increases the balance by 1000.",
+   "impact": "Negative or non-numeric quantities mint balance; strings produce NaN costs that pass the balance check.", "fix": "Validate qty as a positive integer and price as a positive number on a tick grid; reject otherwise with 400.", "confidence": "INFERRED",
+   "false_positive_notes": "Would be lower if a validating proxy sits in front; none is in scope."},
+  {"id": "A11Y-001", "title": "Buy control is a div with a click handler", "class": "accessibility", "severity": "high", "location": "index.html:5",
+   "evidence": "<div class=\"btn\" onclick=\"placeOrder()\">Buy</div>", "reproduction": "Tab through the page: the Buy control never receives focus; screen readers do not announce a button.",
+   "impact": "Keyboard and screen-reader users cannot place an order.", "fix": "Use <button type=\"button\">Buy</button>.", "confidence": "INFERRED"},
+  {"id": "A11Y-002", "title": "Zoom disabled and field labeled only by a placeholder", "class": "accessibility", "severity": "medium", "location": "index.html:3",
+   "evidence": "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"><title>Orders</title></head>", "reproduction": "Pinch-zoom on a phone does not enlarge text; the quantity field has no label once typing starts.",
+   "impact": "Low-vision users cannot zoom; the field loses its name.", "fix": "Remove maximum-scale; add <label for=\"qty\">Quantity</label>; add lang on html.", "confidence": "INFERRED"}
+ ]
+}

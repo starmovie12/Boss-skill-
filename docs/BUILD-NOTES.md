@@ -1,0 +1,8 @@
+# How BOSS was built (short)
+
+- Sources: three operator-supplied skills (a markdown skill, a 25-part XML system, and an archive with a decision-rule "Brain"). They were read in full by eight extraction passes: 521 units, each given one fate (keep as core, keep for a mode, keep as reference, quarantine product canon or fixed design, drop, or conflict). No source text ships; product names are kept out by a hashed token check.
+- Field study: 8 public skill repos studied (96 mechanisms), including anti-generic design guardrails, browser-driven QA, spec-driven work orders and production builder prompts. 7 more were planned and left for later.
+- What BOSS kept from the sources (upgraded): the size router, evidence labels and three-list receipt, text-only placement planning with five questions per element, the no-shortcut zone for money and identity, platform edge cases, state maps, responsive checks, the veto list, three paths for new screens, the two-layer anti-generic rule, verify-first Indic fonts, prompt craft, requirement tests, audit finding schema and severity.
+- What BOSS fixed: silent self-graded gates (now receipts and scripts), halt-and-wait rules (now never stall), fixed palettes and style tables (now derived per project and fingerprinted), rigid universal rules (now sized to the task), unsafe "active defense" (dropped), stale facts (labeled), and a contrast script that could never fail (now recomputed and failing).
+- Not done yet: the comparative benchmark against the sources (verdict NOT-MEASURED, n=0), a trigger test, a fresh-context review. See docs/NEXT-SESSION.xml.
+- Full records: git history at commit 1f436de on branch claude/hopeful-fermat-35aqea (ledger/, field/, docs/RULE-AUDIT.md, docs/OVERMATCH.md, docs/FLAWS.md and the rest).

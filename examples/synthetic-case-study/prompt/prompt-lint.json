@@ -1,0 +1,15 @@
+{
+ "words": 655,
+ "form": "long work order",
+ "flags": [
+  {
+   "kind": "placeholder",
+   "line": 36,
+   "detail": "4. Substance scan: 0 hits (no TODO, lorem, coming soon, empty onPress)."
+  }
+ ],
+ "check": "prompt_lint",
+ "label": "advisory heuristic, not a quality score",
+ "count": 1,
+ "pass": false
+}

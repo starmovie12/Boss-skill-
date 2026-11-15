@@ -1,0 +1,34 @@
+{
+ "check": "audit_report",
+ "findings": 5,
+ "citations": [
+  {
+   "id": "SEC-001",
+   "citation": "verified",
+   "detail": ""
+  },
+  {
+   "id": "SEC-002",
+   "citation": "verified",
+   "detail": ""
+  },
+  {
+   "id": "COR-001",
+   "citation": "verified",
+   "detail": ""
+  },
+  {
+   "id": "A11Y-001",
+   "citation": "verified",
+   "detail": ""
+  },
+  {
+   "id": "A11Y-002",
+   "citation": "verified",
+   "detail": ""
+  }
+ ],
+ "problems": [],
+ "report": "audit/report.md",
+ "pass": true
+}
