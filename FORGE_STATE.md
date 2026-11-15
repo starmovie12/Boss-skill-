@@ -1,13 +1,14 @@
 # FORGE_STATE
 
-- phase: PH4 scripts done (9 scripts + forge tools, 16 tests green); PH5 editions next
+- phase: session 1 closed (skill, scripts, editions, examples, docs delivered); verdict NOT-MEASURED indicative, n=0
 - working branch: `claude/hopeful-fermat-35aqea` (mirror: `boss-skill-forge`)
 - last commit: see `git log -1` on the working branch
 - freeze hash: not set
 - pull request: https://github.com/starmovie12/Boss-skill-/pull/1 (opened by the operator from the Claude Code UI; every push to the working branch updates it)
-- next step: write scripts in src/boss-skill/scripts with tests, then build_editions, RULE-AUDIT, OVERMATCH, README.
+- next step: docs/NEXT-SESSION.xml task N1 (finish field study), then N2 to N5.
 
 ## Done
+- PH3 skill text, PH4 scripts (17 tests), PH5 editions (reproducible), worked synthetic case study, RULE-AUDIT, OVERMATCH, FIELD-SYNTHESIS, README, REPORT, PHONE-TEST, NEXT-SESSION.
 - PH1 ledger: 521 units fated (`python3 tools/ledger_check.py --skip-field` PASS), digests in ledger/digests/, docs GAPS, FLAWS, STRENGTHS, CONTRADICTIONS, hashed ISOLATION-TOKENS.
 - PH0 preflight: sources located and hashed (ledger/SOURCES.json), environment probed (docs/ENV.md), fresh facts (docs/FRESH-FACTS.md), unit rules + manifest (521 units), push probe.
 
@@ -20,7 +21,7 @@
 | Kind | Used | Cap |
 |---|---|---|
 | source extraction | 8 (all shards done) | 8 |
-| field study | 4 launched (F2 done; F1, F3, F4 running) | 4 |
+| field study | 4 (F2, F3 done; F1, F4 stopped by usage limits, then waived) | 4 |
 | fixture and key authoring | 0 | 2 |
 | dev contestants | 0 | 8 |
 | sealed contestants | 0 | 24 (12 in MVB) |
